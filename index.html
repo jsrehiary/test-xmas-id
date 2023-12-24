@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Card</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        #card {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        #header {
+            background-color: #e44d26;
+            padding: 20px;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #message {
+            padding: 30px;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #333;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        #footer {
+            background-color: #e44d26;
+            padding: 20px;
+            color: #fff;
+        }
+
+        #openButton {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #githubLink {
+            color: #333;
+            text-decoration: none;
+            border-left: 2px solid #fff;
+            padding-left: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <div id="header">Merry Christmas!</div>
+        <div id="message">
+            <br>
+            <h1>Selamat Natal</h1>
+            <img src="./images/DSCF0124.JPG" alt="oops, merry christmas anyway." style="max-width: 500px;">
+            <p>Selalu ingat bahwa ada <span style="font-weight: 600; color: #e44d26">Seseorang</span> yang sangat spesial di hidup kita.</p>
+            <hr>
+            <p>Bahkan jika <span style="font-weight: 600; color: #e44d26;">Ia</span> berkenan, sehelai rambut dari kita pun tidak akan turun dari rambut kita.</p>
+            <p style="font-family: monospace;">>rehia<span style="color: orange;">dev</span></p>
+        </div>
+        <button id="openButton" onclick="openLetter()">Open Letter</button>
+        <div id="footer">
+            🎄 Happy Holidays! 🎅
+            <a href="https://github.com/jsrehiary" target="_blank" id="githubLink">Visit my GitHub Page</a>
+        </div>
+        <script>
+            function openLetter() {
+                var message = document.getElementById('message');
+                var openButton = document.getElementById('openButton');
+
+                if (message.style.maxHeight === '0px' || message.style.maxHeight === '') {
+                    message.style.maxHeight = '700px';
+                    openButton.innerHTML = 'Close Letter';
+                } else {
+                    message.style.maxHeight = '0px';
+                    openButton.innerHTML = 'Open Letter';
+                }
+            }
+        </script>
+    </div>
+
+    
+</body>
+</html>
